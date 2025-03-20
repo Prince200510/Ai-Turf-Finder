@@ -8,7 +8,7 @@ import member3 from "../assets/3.jpeg";
 const teamMembers = [
   {
     id: 1,
-    name: "Harsh",
+    name: "Prince Maurya",
     role: "Founder & CEO",
     image: member1,
     linkedin: "#",
@@ -17,7 +17,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Harsh",
+    name: "Prince Maurya",
     role: "Marketing Head",
     image: member2,
     linkedin: "#",
@@ -26,7 +26,7 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "Harsh",
+    name: "Prince Maurya",
     role: "Tech Lead",
     image: member3,
     linkedin: "#",
