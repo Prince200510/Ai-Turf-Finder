@@ -19,15 +19,15 @@ AI Turf Finder is an intelligent sports turf booking platform that leverages AI-
 - **Tailwind CSS / Material-UI** – Styling and responsiveness
 
 ### Backend:
-- **Node.js & Express.js** – API development
+- **Node.js – API development
 - **Firebase Authentication** – Secure user sign-in/sign-up
-- **MongoDB / Firebase Realtime Database** – Data storage
+- **Firebase Realtime Database** – Data storage
 
 ### AI & Machine Learning:
 - **FastAPI** – Backend framework for AI integrations
 - **Google Gemini AI** – AI-powered chatbot
 - **Deep Learning Neural Network** – Turf ranking model
-- **TensorFlow / PyTorch** – AI model training
+- **TensorFlow** – AI model training
 
 ## 📦 External Libraries & Packages Used
 - **Axios** – API requests
