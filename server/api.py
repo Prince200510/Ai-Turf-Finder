@@ -6,7 +6,7 @@ from flask_cors import CORS
 import google.generativeai as genai
 import re
 
-GENAI_API_KEY = "AIzaSyAOoMvnyYwVMleBQU_JdxQrjRQ4uRh6wf0"
+GENAI_API_KEY = YOUR_API_KEY
 genai.configure(api_key=GENAI_API_KEY)
 
 TURF_KEYWORDS = [   "turf",   "turf cleaner",   "sports ground",   "artificial grass",   "booking turf",  
