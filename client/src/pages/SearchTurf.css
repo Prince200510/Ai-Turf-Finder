@@ -1,0 +1,441 @@
+.search-turf-container{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    /* background-color: #ebebeb; */
+    padding: 20px;
+    height: 100%;
+}
+.predict-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.predict-button:hover {
+  background-color: #45a049;
+}
+
+.search-filter-container{
+    display: flex;
+    gap: 10px;
+}
+.search-turf-search-engine input{
+  margin-right: 10px;
+}
+
+/* .turf-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+} */
+
+
+/* .search-filter{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.search-filter h3{
+    padding: 0px;
+    margin: 0px;
+} */
+.search-turf-card-container,
+.search-display-1,
+.search-display{
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.search-filter-container{
+    margin-top: 20px;
+    display: flex;
+}
+
+.search-filter {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+
+  }
+  
+  .search-filter h3 {
+    margin-bottom: 10px;
+  }
+  
+  .filter-dropdown {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 8px 0;
+  }
+  
+  .filter-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .filter-button:hover {
+    background-color: #0056b3;
+  }
+
+  
+
+.search-turf-search-engine {
+    align-items: center;
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .search-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+  
+
+  .search-turf-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .turf-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .turf-details {
+    padding: 15px;
+  }
+  
+  .turf-rating {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .star {
+    color: #ccc;
+    font-size: 18px;
+  }
+  
+  .filled {
+    color: gold;
+  }
+  
+  .rating-count {
+    margin-left: 8px;
+    font-size: 14px;
+  }
+  
+  .book-now {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .book-now:hover {
+    background: #218838;
+  }
+
+
+  /* Container to align all cards properly */
+.search-turf-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Turf Card */
+.turf-card {
+  width: 250px;
+  height: 370px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(191, 22, 22, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.turf-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Turf Image */
+.turf-image {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+/* Turf Details */
+.turf-details {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+}
+.turf-details p strong {
+  margin: 0px;
+  padding: 0px;
+}
+.turf-details h3 {
+  font-size: 18px;
+  margin-bottom: 1px;
+}
+
+.turf-details p {
+  font-size: 14px;
+  color: #555;
+  margin: 3px 0;
+}
+
+/* Star Rating */
+.turf-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star {
+  font-size: 20px;
+  color: lightgray;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.star.filled {
+  color: gold;
+}
+
+/* Rating Count */
+.rating-count {
+  font-size: 14px;
+  color: #555;
+  margin-left: 5px;
+}
+
+/* Book Now Button */
+.book-now {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.book-now:hover {
+  background-color: #0056b3;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  color: gray; /* Default star color */
+  transition: color 0.3s;
+}
+
+.star.filled {
+  color: gold; /* Filled star color */
+}
+/* User Auth Section */
+.user-auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.user-auth-container p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.logout-button {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+  border: none;
+  color: white;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.logout-button:hover {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  transform: scale(1.05);
+}
+
+.logout-button:active {
+  transform: scale(0.95);
+}
+
+/* Message for non-logged-in users */
+.user-auth-container p:not(.user-email) {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff4b2b;
+}
+
+  @media (max-width: 468px) {
+  .search-turf-card-container{
+    width: 300px;
+  }
+  .search-turf-search-engine input{
+    width: 280px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 468px) {
+  /* Main Container */
+  .search-turf-container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  /* Search Filter Section */
+  .search-filter-container {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .search-filter {
+    width: 100%;
+    padding: 12px;
+    box-shadow: none;
+  }
+
+  .filter-dropdown,
+  .checkbox-group {
+    width: 100%;
+  }
+
+  /* Search Bar and Button */
+  .search-turf-search-engine {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .search-turf-search-engine input {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Turf Card Section */
+  .search-turf-card-container {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .search-turf-card {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .turf-image {
+    width: 100%;
+    height: 150px;
+  }
+
+  .turf-details {
+    padding: 8px;
+  }
+
+  /* Book Now Button */
+  .book-now {
+    width: 100%;
+    padding: 8px;
+  }
+
+  /* User Auth Section */
+  .user-auth-container {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .logout-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,234 @@
+body {
+  background: url("../../assets/grass.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+
+/* General Navbar Styles */
+.navbar {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .hidden {
+    transform: translateY(-100%);
+}
+
+.visible {
+    transform: translateY(0);
+}
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: flex-end; /* Push menu to the right */
+    margin-right: 40px;
+  }
+
+  .nav-icon {
+    margin-left: 30px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    flex: 1; /* Takes available space */
+  }
+  .nav-icon h1{
+    font-family: Pacifico, cursive;
+  }
+  .nav-icon span{
+    color: rgb(74, 202, 0);
+  }
+  .menu-icon {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  /* Default Navigation Links */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    justify-content: flex-end; /* Align links to the right */
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: rgb(74, 202, 0);
+    text-decoration: underline;
+  }
+  
+  .navbar button{
+    padding: 5px 20px;
+    background-color: rgb(74, 202, 0);
+    color: rgb(255, 255, 255);
+    border: 5px solid rgb(38, 103, 0);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: -5px;
+    transition: 0.3s;
+  }
+    
+  .navbar button:hover{
+    transform: scale(1.09);
+  }
+
+
+  .dropdown-content {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 200px;
+    z-index: 1000;
+    padding: 10px 0;
+  }
+  
+  .dropdown-content li {
+    list-style: none;
+    padding: 10px 20px;
+  }
+  
+  .dropdown-content li a {
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content li:hover {
+    background-color: #f4f4f4;
+  }
+  
+  /* Triangle Arrow */
+  .dropdown::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    display: none;
+  }
+  
+  .dropdown:hover::after {
+    display: block;
+  }
+
+
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-icon {
+        display: none;
+    }
+    .menu-icon {
+      display: block;
+    }
+    .navbar {
+        justify-content: flex-end;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      right: 170px;
+      width: 200px;
+      background: #fff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      padding: 1px 0;
+    }
+    .nav-links li a{
+        color: black;
+    }
+
+
+
+    /* Navbar Styling */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 15px 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: top 0.3s;
+  z-index: 1000;
+}
+
+.navbar.hidden {
+  top: -80px; /* Hide navbar on scroll */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  right: 170px;
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links.open {
+  display: flex;
+}
+
+/* Background Overlay when Menu is Open */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4); /* Light Black with Opacity */
+  backdrop-filter: blur(5px); /* Adds a subtle blur effect */
+  z-index: 999;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Navbar Toggle Icon */
+.menu-icon {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+  }
+  
+  

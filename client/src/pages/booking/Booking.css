@@ -1,0 +1,109 @@
+.booking-turf-container {
+  margin-top: 70px;
+  display: flex;
+  background-color: #ebebeb;
+  justify-content: center;
+  padding: 20px;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+.booking-container textarea{
+  resize: none;
+}
+.booking-container {
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  padding: 20px;
+  gap: 20px;  /* Adds space between the two sections */
+  max-width: 800px; /* Ensures proper layout */
+  width: 100%;
+  height: 700px;
+  margin-bottom: 20px;
+}
+
+.turf-details-booking {
+  flex: 1;  /* Takes equal space */
+  min-width: 300px; /* Prevents shrinking too much */
+  border: 1px solid rgb(141, 141, 141);
+  padding: 15px;
+  border-radius: 5px;
+}
+.turf-details-booking p{
+  padding: 0px;
+  margin: 0px;
+}
+.turf-details-booking h3{
+  padding: 0px;
+  font-size: 17px;
+  margin-top: 5px;
+}
+.turf-details-booking ul{
+  list-style: none;
+}
+.turf-details-booking li{
+  margin-left: 0px;
+  padding: 0px;
+}
+.turf-details-booking img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.turf-details-booking h2 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.booking-form {
+  flex: 1; /* Takes equal space */
+  min-width: 300px;
+  border: 1px solid rgb(141, 141, 141);
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.booking-form h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.booking-form textarea,
+.booking-form select,
+.booking-form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.booking-form button {
+  padding: 10px 15px;
+  background-color: #25ac00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.booking-form button:hover {
+  transform: scale(1.06);
+}
+/* Booking.css */
+
+.no-slot-message {
+  font-size: 12px; /* Decrease font size */
+  color: #ff4d4d; /* Red color for attention */
+  margin-top: 5px;
+  font-style: italic;
+  text-align: left;
+}

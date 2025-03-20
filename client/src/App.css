@@ -1,0 +1,61 @@
+/* Full-screen loading container */
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+} */
+
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e2f; /* Track background color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00c853; /* Green scrollbar color */
+  border-radius: 10px; /* Rounded edges */
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00a044; /* Darker green on hover */
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 3px; /* Removes the horizontal scrollbar */
+}
+
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: white;
+  }
+  
+  /* Gradient spinner with increased size */
+  .custom-spinner {
+    width: 80px;
+    height: 80px;
+    border: 8px solid transparent;
+    border-top: 8px solid #ff7eb3; /* Pink */
+    border-right: 8px solid #ffbf69; /* Orange */
+    border-bottom: 8px solid #2ec4b6; /* Teal */
+    border-left: 8px solid #5e60ce; /* Blue */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Keyframes for smooth rotation */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

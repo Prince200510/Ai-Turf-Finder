@@ -1,0 +1,60 @@
+.milestone-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+  }
+  
+  .milestone-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #a6ff00;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .milestone-heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 40px;
+  }
+  
+  .milestone-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+  
+  .milestone-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .milestone-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .milestone-count {
+    font-size: 30px;
+    font-weight: 700;
+    color: #a6ff00;
+  }
+  
+  .milestone-card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    margin: 10px 0;
+  }
+  
+  .milestone-description {
+    font-size: 14px;
+    color: #555;
+  }
+  
