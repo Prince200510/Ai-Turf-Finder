@@ -52,13 +52,6 @@ yarn install # Alternative package manager
 npm start
 ```
 
-### Backend Setup:
-```sh
-cd backend
-npm install
-node server.js
-```
-
 ## 🚀 AI Model Training
 ```sh
 python train_model.py  # Train deep learning model
