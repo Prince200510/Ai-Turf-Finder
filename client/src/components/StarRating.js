@@ -9,15 +9,11 @@ const StarRating = ({ turfId }) => {
   const handleRating = async (selectedRating) => {
     setRating(selectedRating);
 
-    // Example: Update rating in Firebase or your backend
     const updatedRatings = {
       id: turfId,
       rating: selectedRating,
     };
-
-    // Replace this with your actual API call
     try {
-      // Simulate API request
       await new Promise((resolve) => setTimeout(resolve, 1000));
       Swal.fire("Success!", "Your rating has been updated.", "success");
     } catch (error) {

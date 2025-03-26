@@ -259,7 +259,7 @@ const Booking = () => {
     suggestion: "",
     hours: "1",
     slot: "",
-    selectedDate: "", // ✅ Fixed initial empty date value
+    selectedDate: "", 
   });
 
   useEffect(() => {
@@ -277,8 +277,6 @@ const Booking = () => {
 
           if (selectedTurf) {
             setTurf(selectedTurf);
-
-            // Fetch booked slots per date
             const bookedData = selectedTurf.booking || {};
             setBookedSlots(bookedData);
           }
@@ -293,9 +291,6 @@ const Booking = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  // 🔥 FIX SLOT CONFLICT LOGIC 🔥
- // ✅ FIX SLOT CONFLICT LOGIC (WITH PARTIAL OVERLAPS)
 const checkSlotConflict = (newSlot) => {
   if (!formData.selectedDate) return false;
 
@@ -309,20 +304,17 @@ const checkSlotConflict = (newSlot) => {
       .split(" to ")
       .map((time) => parseInt(time.split(":")[0]));
 
-    // 🔥 Check for partial or complete overlaps
     if (
-      (newStart >= bookedStart && newStart < bookedEnd) || // Starts in between
-      (newEnd > bookedStart && newEnd <= bookedEnd) || // Ends in between
-      (newStart <= bookedStart && newEnd >= bookedEnd) // Fully covers
+      (newStart >= bookedStart && newStart < bookedEnd) || 
+      (newEnd > bookedStart && newEnd <= bookedEnd) || 
+      (newStart <= bookedStart && newEnd >= bookedEnd) 
     ) {
-      return true; // Conflict detected
+      return true; 
     }
   }
-  return false; // No conflict
+  return false; 
 };
 
-
-  // 📌 FIX DATE FORMAT (YYYY-MM-DD)
   const generateDates = () => {
     const dates = [];
     const today = new Date();
@@ -338,12 +330,10 @@ const checkSlotConflict = (newSlot) => {
 
     return dates;
   };
-
-  // ✅ FIX SLOT GENERATION WITH HOURS
   const generateSlots = () => {
     const slots = [];
-    let startHour = 7; // Start at 7:00 AM
-    let endHour = 24; // End at 12:00 AM
+    let startHour = 7; 
+    let endHour = 24; 
     let bookingHours = parseInt(formData.hours);
 
     for (let i = startHour; i + bookingHours <= endHour; i += bookingHours) {
@@ -351,7 +341,6 @@ const checkSlotConflict = (newSlot) => {
       let end = `${i + bookingHours < 10 ? "0" + (i + bookingHours) : i + bookingHours}:00`;
       let slot = `${start} to ${end}`;
 
-      // Hide slots that are already booked
       if (!checkSlotConflict(slot)) {
         slots.push(slot);
       }
@@ -365,7 +354,6 @@ const checkSlotConflict = (newSlot) => {
       return;
     }
   
-    // Check if slot is already booked
     if (checkSlotConflict(formData.slot)) {
       Swal.fire(
         "Slot Conflict!",
@@ -379,14 +367,12 @@ const checkSlotConflict = (newSlot) => {
     const bookingData = {
       name: formData.fullName,
       mobile_no: formData.mobile,
-      hours: formData.hours, // ✅ Include number of hours in booking data
+      hours: formData.hours,
     };
   
     try {
       await set(ref(database, bookingPath), bookingData);
       Swal.fire("Booking Confirmed!", "Your slot has been booked.", "success");
-  
-      // ✅ Update bookedSlots immediately after booking
       setBookedSlots((prev) => ({
         ...prev,
         [formData.selectedDate]: {
@@ -394,8 +380,6 @@ const checkSlotConflict = (newSlot) => {
           [formData.slot]: bookingData,
         },
       }));
-  
-      // ✅ Generate and Download PDF Invoice
       generateInvoicePDF();
   
       setFormData({ ...formData, slot: "" });

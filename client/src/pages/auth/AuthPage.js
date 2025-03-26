@@ -22,12 +22,11 @@ export function AuthProvider({ children }) {
     }
   }, []);
 
-  // Corrected useEffect to prevent infinite loop
   useEffect(() => {
     if (user) {
       navigate("/SearchTurf");
     }
-  }, [user, navigate]); // Added user as a dependency.
+  }, [user, navigate]);
 
 
   const handleGoogleSignIn = async () => {

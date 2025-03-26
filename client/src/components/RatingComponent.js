@@ -140,7 +140,7 @@ const RatingComponent = ({ turf, db, user }) => {
   // };
 
   const handleRating = async (newRating) => {
-    if (!user || !user.email) { // Check if user and user.email exist
+    if (!user || !user.email) { 
       Swal.fire({
         icon: "warning",
         title: "Oops...",
@@ -150,7 +150,7 @@ const RatingComponent = ({ turf, db, user }) => {
       return;
     }
   
-    const userKey = user.email.replace(/\./g, "_"); // Now this is safe to call
+    const userKey = user.email.replace(/\./g, "_"); 
     const userRef = ref(db, `users/${userKey}/ratings/${turf.name}`);
     const turfRef = ref(db, `Turf/${turf.location}/${turf.name}`);
   

@@ -76,14 +76,11 @@
 // export { auth, database, app, firebaseConfig };
 
 
-
-// Import Firebase modules
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { getDatabase, ref, set, get } from "firebase/database";
 import { getAnalytics } from "firebase/analytics";
 
-// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyDBwhqwEl5P48hGqBW47c_jKvnU0hPHsxs",
   authDomain: "turf-finder-4bfdd.firebaseapp.com",
@@ -94,7 +91,6 @@ const firebaseConfig = {
   measurementId: "G-JKMG23HYKV"
 };
 
-// ✅ Check if Firebase is already initialized, and only initialize if not
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 
 const auth = getAuth(app);
@@ -102,12 +98,10 @@ const database = getDatabase(app);
 const analytics = typeof window !== "undefined" ? getAnalytics(app) : null;
 const provider = new GoogleAuthProvider();
 
-// Google Sign-In Function
 export const signInWithGoogle = async () => {
   try {
     const result = await signInWithPopup(auth, provider);
     const user = result.user;
-    // Store user data in Realtime Database
     set(ref(database, "users/" + user.uid), {
       name: user.displayName,
       email: user.email,
@@ -120,7 +114,6 @@ export const signInWithGoogle = async () => {
   }
 };
 
-// Google Sign-Out Function
 export const logout = async () => {
   try {
     await signOut(auth);
@@ -130,14 +123,12 @@ export const logout = async () => {
   }
 };
 
-// Function to Write Data to Realtime Database
 export const writeData = (userId, data) => {
   set(ref(database, "users/" + userId), data)
     .then(() => console.log("Data written successfully!"))
     .catch((error) => console.error("Write Error:", error));
 };
 
-// Function to Read Data from Realtime Database
 export const readData = async (userId) => {
   try {
     const snapshot = await get(ref(database, "users/" + userId));
@@ -153,5 +144,4 @@ export const readData = async (userId) => {
   }
 };
 
-// ✅ Export Firebase instances
 export { auth, database, app, firebaseConfig };

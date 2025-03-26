@@ -44,7 +44,6 @@ const AboutUs = () => {
     <>
       <div className="about-us-parent">
         <div className="about-container">
-          {/* 🌱 Mission and Vision */}
           <section className="mission-vision-section">
             <div className="mission-card" data-aos="fade-right">
               <h2 className="section-title">🌱 Our Mission</h2>
@@ -70,8 +69,6 @@ const AboutUs = () => {
               </p>
             </div>
           </section>
-
-          {/* 🚀 Future Plans */}
           <section className="section future-plans" data-aos="fade-up">
             <h2 className="section-title">🚀 Our Future Plans</h2>
             <p className="section-text">
@@ -124,8 +121,6 @@ const AboutUs = () => {
               ))}
             </div>
           </section>
-
-          {/* 📞 Contact Information */}
           <section className="section contact-section" data-aos="fade-up">
             <h2 className="section-title">📞 Contact Us</h2>
             <div className="contact-info">

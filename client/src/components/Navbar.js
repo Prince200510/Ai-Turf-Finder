@@ -69,7 +69,6 @@ export default function Navbar() {
       const currentScrollPos = window.scrollY;
       setVisible(currentScrollPos <= 50);
 
-      // Close menu when scrolling starts
       if (menuOpen) {
         setMenuOpen(false);
       }
@@ -77,11 +76,9 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [menuOpen]); // Depend on menuOpen to close on scroll
-
+  }, [menuOpen]); 
   return (
     <>
-      {/* Background Overlay when Menu is Open */}
       {menuOpen && <div className="overlay" onClick={() => setMenuOpen(false)}></div>}
 
       <nav className={`navbar ${visible ? "visible" : "hidden"}`}>
